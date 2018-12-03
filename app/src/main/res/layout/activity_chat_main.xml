@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/kids_bg"
+    tools:context=".ChatMainActivity">
+
+    <include
+        android:id="@+id/entrance_board"
+        layout="@layout/entrance_board_layout"
+        android:layout_width="107px"
+        android:layout_height="400px"
+        android:layout_marginLeft="48px"
+        android:layout_marginTop="50px" />
+
+    <FrameLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="594px"
+        android:layout_height="420px"
+        android:layout_marginLeft="156px"
+        android:layout_marginTop="39px">
+
+        <com.kinstalk.her.qchat.widget.QViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:persistentDrawingCache="animation" />
+        <!--android:flipInterval="30"-->
+        <!--android:layout_toRightOf="@+id/entrance_board"-->
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/kids_bg_top" />
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28px"
+        android:layout_marginTop="5px"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/entrance_board_time_textSize" />
+
+    <TextView
+        android:id="@+id/send_message_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black60"
+        android:gravity="center"
+        android:text="发送中。。。"
+        android:textColor="@color/white"
+        android:textSize="32px"
+        android:visibility="gone" />
+
+</FrameLayout>

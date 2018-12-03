@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/voice_book_bg"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:src="@drawable/gift_back" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_parent_name"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_toRightOf="@+id/iv_back">
+        <!--   android:background="@mipmap/voice_book_tab_bg"-->
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.kinstalk.her.qchat.library.AutoRollRecyclerView
+        android:id="@+id/autopollrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_parent_name"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layoutManager="LinearLayoutManager">
+
+    </com.kinstalk.her.qchat.library.AutoRollRecyclerView>
+
+</RelativeLayout>

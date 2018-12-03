@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pk"
+    android:clipChildren="false">
+
+    <ImageButton
+        android:id="@+id/choose_back"
+        android:layout_width="76px"
+        android:layout_height="76px"
+        android:layout_marginLeft="14px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/back_pk" />
+
+    <ImageView
+        android:id="@+id/pet_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/choose_bottom" />
+
+    <!--宠物卡片是否在使用-->
+    <!--使用中:pet_use  未使用:pet_not_use 未拥有:pet_not_has-->
+    <ImageButton
+        android:id="@+id/pet_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3px"
+        android:background="@drawable/pet_use" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pet_viewpager"
+        android:layout_width="400px"
+        android:layout_height="308px"
+        android:layout_above="@+id/pet_bottom"
+        android:layout_below="@+id/choose_back"
+        android:layout_centerHorizontal="true"
+        android:clipChildren="false" />
+
+</RelativeLayout>

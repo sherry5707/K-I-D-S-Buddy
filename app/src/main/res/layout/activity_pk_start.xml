@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pk">
+
+    <ImageButton
+        android:id="@+id/back_pk"
+        android:layout_width="76px"
+        android:layout_height="76px"
+        android:layout_marginLeft="14px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/back_pk" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="16px"
+        android:background="@drawable/gift_credit_bg">
+
+        <TextView
+            android:id="@+id/credit_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="58px"
+            android:textColor="#FFFFFF"
+            android:textSize="32px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_credit_layout"
+        android:layout_width="159px"
+        android:layout_height="60px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:background="@drawable/game_add_credit_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/add_credit_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="68px"
+            android:textColor="#FFFFFF"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="736px"
+        android:layout_height="168px"
+        android:layout_centerInParent="true"
+        android:src="@drawable/center_pk" />
+
+    <ImageView
+        android:id="@+id/pk_bottom"
+        android:layout_width="564px"
+        android:layout_height="118px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pk_bottom" />
+
+    <!--宠物空-->
+    <ImageView
+        android:layout_width="176px"
+        android:layout_height="150px"
+        android:layout_marginLeft="85px"
+        android:layout_marginTop="108px"
+        android:src="@drawable/bg_pk_kong" />
+
+    <!--头像空-->
+    <ImageView
+        android:id="@+id/img_avatar_kong"
+        android:layout_width="317px"
+        android:layout_height="319px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13px"
+        android:src="@drawable/avatar_pk_kong" />
+
+    <!--宠物img-->
+    <ImageView
+        android:id="@+id/img_pet"
+        android:layout_width="176px"
+        android:layout_height="150px"
+        android:layout_marginLeft="85px"
+        android:layout_marginTop="108px" />
+
+    <!--头像img "-->
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="196px"
+        android:layout_height="196px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75px"
+        android:src="@drawable/avatar_pk_default" />
+
+    <!--用户名-->
+    <TextView
+        android:id="@+id/pk_name"
+        android:layout_width="175px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100px"
+        android:layout_marginTop="204px"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28px" />
+
+
+    <!--点击进入游戏 btn_pk_start-->
+    <ImageView
+        android:id="@+id/btn_pk_start"
+        android:layout_width="280px"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9px"
+        android:src="@drawable/pk_start_off" />
+
+    <TextView
+        android:id="@+id/pk_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pk_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12px"
+        android:textColor="#FFFFFF"
+        android:textSize="28px" />
+
+    <LinearLayout
+        android:id="@+id/pk_use_credit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pk_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="报名消耗"
+            android:textColor="#FFFFFF"
+            android:textSize="28px" />
+
+        <ImageView
+            android:layout_width="46px"
+            android:layout_height="46px"
+            android:layout_marginLeft="10px"
+            android:src="@drawable/credit_img" />
+
+        <TextView
+            android:id="@+id/pk_use_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="28px" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/whole_layout"
+    android:background="@drawable/alarm_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lv_endgroup"
+        android:layout_marginTop="80px"
+        android:layout_marginLeft="141px"
+        android:layout_width="530px"
+        android:layout_height="318px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_marginTop="58px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/alarm_icon" />
+
+        <TextView
+            android:id="@+id/reminder_time"
+            android:layout_marginTop="17px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#333333"
+            android:textSize="32px"
+            tools:text="Content" />
+
+        <TextView
+                android:id="@+id/reminder_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="32px"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reminder_ignore"
+        android:layout_width="81px"
+        android:layout_height="81px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41px"
+        android:background="@drawable/alarm_close"
+        android:maxLines="1" />
+
+</RelativeLayout>

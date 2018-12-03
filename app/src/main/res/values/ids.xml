@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- MESSAGE LIST ITEM -->
+    <item name="messageEmoji" type="id" />
+
+</resources>

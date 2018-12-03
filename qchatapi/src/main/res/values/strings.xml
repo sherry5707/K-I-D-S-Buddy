@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">qchatapi</string>
+    <string name="api_error_req_JSONException">请求数据体的Json格式错误！</string>
+    <string name="api_error_NO_ACCESS_KEY">未带校验access_key，或者未填请求数据！</string>
+    <string name="api_error_REQ_METHOD_ERROR">请求方法不对，比如POST请求，客户端却发了GET请求！</string>
+    <string name="api_error_POST_DATA_ERROR">POST数据中，填写的数据不符合要求！</string>
+    <string name="api_error_ACCESS_KEY_FAILED">Access key不正确或者过期！</string>
+    <string name="api_error_ACCESS_KEY_EMPTY">申请Access key为空！</string>
+    <string name="api_error_req_ACCESS_KEY_FAILED">申请Access key失败！</string>
+    <string name="api_error_req_CONFIG_LIST_FAILED">获取配置列表失败！</string>
+    <string name="api_error_rsp_JSONException">返回的Json数据解析错误</string>
+    <string name="api_error_rsp_IOException">服务暂时不可用！</string>
+    <string name="api_error_rsp_SERVER_ERROR">服务器错误！</string>
+    <string name="api_error_rsp_HttpException">服务器错误！</string>
+    <string name="api_error_rsp_EMPTY">返回的数据为空！</string>
+    <string name="api_error_rsp_CONTENT_EMPTY">返回的数据内容为空！</string>
+    <string name="api_error_rsp_empty_contentEncoding">返回的数据无编码格式！</string>
+    <string name="api_error_unknoow">Q chat 请求未知错误！</string>
+</resources>

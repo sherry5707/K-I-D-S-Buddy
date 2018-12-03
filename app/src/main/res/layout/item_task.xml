@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/task_layout"
+        android:layout_width="762px"
+        android:layout_height="128px"
+        android:background="@drawable/bg_item_gift">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="20px"
+            android:src="@drawable/task_img_default" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19px"
+            android:layout_marginTop="22px"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="#5A3B17"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="19px"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="#5A3B17"
+            android:textSize="28px" />
+
+        <ImageView
+            android:id="@+id/credit_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="498px"
+            android:layout_marginTop="28px"
+            android:src="@drawable/credit_img" />
+
+        <TextView
+            android:id="@+id/credit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3px"
+            android:layout_marginTop="28px"
+            android:layout_toRightOf="@+id/credit_img"
+            android:textColor="#AF885A"
+            android:textSize="34px" />
+
+        <TextView
+            android:id="@+id/each"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/credit_text"
+            android:layout_marginLeft="3px"
+            android:layout_toRightOf="@+id/credit_img"
+            android:text="每次"
+            android:textColor="#D8AF80"
+            android:textSize="26px"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/status_img"
+            android:layout_width="94px"
+            android:layout_height="116px"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

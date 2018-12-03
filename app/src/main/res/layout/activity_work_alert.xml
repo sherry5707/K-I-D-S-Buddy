@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b4000000">
+
+    <TextView
+        android:id="@+id/work_alert_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22px"
+        android:text="今日通知"
+        android:textColor="#FFFFFFFF"
+        android:textSize="38px" />
+
+    <com.kinstalk.her.qchat.view.TouchableRecyclerView
+        android:id="@+id/work_alert_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="98px"
+        android:background="@android:color/transparent"
+        android:fadeScrollbars="true"
+        android:overScrollMode="never"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
+    <!--android:paddingRight="50px"-->
+
+    <TextView
+        android:id="@+id/work_alert_finish_btn"
+        android:layout_width="180px"
+        android:layout_height="60px"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="25px"
+        android:layout_marginRight="28px"
+        android:background="@drawable/btn_work_finish"
+        android:gravity="center"
+        android:text="知道了"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30px" />
+
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="wake_up_first_scene">
+        <item>起床啦，新的一天开始了，快来看太阳公公升起来了</item>
+        <item>起床啦，太阳都晒屁股了</item>
+    </string-array>
+    <string-array name="wake_up_second_scene">
+        <item>有一只小鸟停在窗前，正在对你眨眼睛哦</item>
+        <item>快起床哦，鸟儿在树上唱歌了</item>
+    </string-array>
+    <string-array name="wake_up_two_star">
+        <item>现在打卡可以获得2颗星</item>
+        <item>快打卡，星星已经消失了一颗了</item>
+    </string-array>
+    <string-array name="wake_up_one_star">
+        <item>现在打卡可以获得1颗星</item>
+        <item>小星星快跑光了，快来打卡吧</item>
+    </string-array>
+    <string-array name="sleep_first_scene">
+        <item>准备睡觉啦，准备好了就跟我说：你好小微，我开始睡觉了，或者也可以，点击屏幕确认开始睡觉</item>
+        <item>真棒,把今天的任务都完成了，快准备睡觉吧</item>
+        <item>已经很晚了，睡前要记得刷牙啊</item>
+        <item>快睡觉了，不能再吃东西了哦</item>
+        <item>快睡觉了，记得把书包收拾好啊</item>
+    </string-array>
+</resources>

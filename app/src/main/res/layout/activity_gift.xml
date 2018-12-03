@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gift_background">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66px"
+        android:layout_marginLeft="8px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="13px">
+
+        <!--左边返回按钮-->
+        <ImageButton
+            android:id="@+id/gift_back"
+            android:layout_width="65px"
+            android:layout_height="65px"
+            android:background="@drawable/gift_back" />
+
+        <!--中间标题布局-->
+        <LinearLayout
+            android:layout_width="503px"
+            android:layout_height="66px"
+            android:layout_marginLeft="27px"
+            android:layout_toRightOf="@+id/gift_back"
+            android:background="@drawable/gift_title_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/task_btn"
+                android:layout_width="160px"
+                android:layout_height="54px"
+                android:layout_marginLeft="8px"
+                android:layout_marginRight="8px"
+                android:layout_weight="1"
+                android:background="@drawable/gift_title_item_bg"
+                android:gravity="center"
+                android:text="任务"
+                android:textColor="#FFFFFF"
+                android:textSize="34px" />
+
+            <Button
+                android:id="@+id/gift_btn"
+                android:layout_width="160px"
+                android:layout_height="54px"
+                android:layout_marginLeft="8px"
+                android:layout_marginRight="8px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="礼物"
+                android:textColor="#005A98"
+                android:textSize="34px" />
+
+            <Button
+                android:id="@+id/card_btn"
+                android:layout_width="160px"
+                android:layout_height="54px"
+                android:layout_marginLeft="8px"
+                android:layout_marginRight="8px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="收藏册"
+                android:textColor="#005A98"
+                android:textSize="34px" />
+
+        </LinearLayout>
+
+        <!--右边数量，星星或者学分根据需求切换-->
+        <RelativeLayout
+            android:id="@+id/star_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gift_star_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/star_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="54px"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="32px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/credit_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gift_credit_bg">
+
+            <TextView
+                android:id="@+id/credit_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="58px"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="32px" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.kinstalk.her.qchat.view.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_marginTop="30px"
+        android:overScrollMode="never" />
+
+    <!--阴影部分，下周调整加入-->
+    <!--<RelativeLayout
+        android:id="@+id/bg_gift_title"
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:layout_below="@+id/title"
+        android:background="@drawable/bg_gift_title" />-->
+</RelativeLayout>

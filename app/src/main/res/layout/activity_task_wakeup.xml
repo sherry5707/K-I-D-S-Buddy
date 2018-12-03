@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TaskSleepOrWakeupActivity">
+
+    <ImageView
+        android:id="@+id/bgImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/wakeup_bg" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/wakeup_text_tip"
+            />
+
+        <TextView
+            android:id="@+id/hour1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginLeft="16dp"
+            android:background="@mipmap/wakeup_count_down_bg"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="40dp"
+            />
+
+        <TextView
+            android:id="@+id/hour2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginLeft="7dp"
+            android:background="@mipmap/wakeup_count_down_bg"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="40dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/wakeup_count_down_point"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/minute1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/wakeup_count_down_bg"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="40dp"
+            />
+
+        <TextView
+            android:id="@+id/minute2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:background="@mipmap/wakeup_count_down_bg"
+            android:textColor="#ffffffff"
+            android:textSize="40dp"
+            android:text="1"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/startImageView1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wakeup_star" />
+
+        <ImageView
+            android:id="@+id/startImageView2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wakeup_star" />
+
+        <ImageView
+            android:id="@+id/startImageView3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wakeup_star" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/wakeupSignButton"
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="17dp"
+        android:background="@mipmap/wakeup_sign"
+        android:onClick="signButtonClick"
+        android:text="提前打卡"
+        android:textColor="#FFF"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/btn_close"
+        android:onClick="closeButtonClose"/>
+</RelativeLayout>

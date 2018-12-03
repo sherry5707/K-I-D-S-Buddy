@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/sleep1" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep2" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep3" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep4" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep5" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep6" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep7" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep8" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep9" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep10" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep11" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep12" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep13" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep14" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep15" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep16" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep17" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep18" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep19" android:duration="2857" />
+    <item android:drawable="@mipmap/sleep20" android:duration="2857" />
+</animation-list>

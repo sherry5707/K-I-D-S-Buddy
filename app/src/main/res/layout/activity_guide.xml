@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99FFFFFF">
+
+   <ImageView
+        android:id="@+id/guide_vp"
+        android:layout_marginTop="129px"
+        android:layout_marginLeft="338px"
+        android:layout_width="121px"
+        android:layout_height="122px"
+        android:background="@drawable/guide_page_1"/>
+
+    <TextView
+        android:id="@+id/guide_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guide_vp"
+        android:layout_marginTop="57px"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="双手捏合可以放大图片"
+        android:textColor="@color/white"
+        android:textSize="30px" />
+
+</RelativeLayout>

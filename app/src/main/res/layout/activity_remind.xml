@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remind_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/kids_bg_2">
+
+    <com.kinstalk.her.qchat.view.TouchableRecyclerView
+        android:id="@+id/remind_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="109px"
+        android:layout_below="@+id/work_title_text"
+        android:background="@android:color/transparent"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/work_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18px"
+        android:text="日程表"
+        android:textColor="#FF005A98"
+        android:textSize="38px" />
+
+    <ImageButton
+        android:id="@+id/remind_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/btn_back" />
+
+    <TextView
+        android:id="@+id/remind_no_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="在这里可以看到每天要做的事情哦"
+        android:textColor="#749CBF"
+        android:textSize="30px" />
+
+</FrameLayout>

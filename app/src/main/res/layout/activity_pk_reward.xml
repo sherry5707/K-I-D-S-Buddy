@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pk_reward_bg">
+
+    <ImageView
+        android:id="@+id/game_ranking_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/ranking_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24px"
+        android:textColor="#FFFFFF"
+        android:textSize="32px" />
+
+    <ImageView
+        android:id="@+id/pk_ranking_bg"
+        android:layout_width="303px"
+        android:layout_height="323px"
+        android:layout_below="@+id/ranking_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2px"
+        android:src="@drawable/pk_ranking_other" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="136px"
+        android:layout_height="136px"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/ranking_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="146px"
+        android:src="@drawable/avatar_pk_default" />
+
+    <!--名次-->
+    <TextView
+        android:id="@+id/ranking_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ranking_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220px"
+        android:text="12"
+        android:textColor="#FFFFFF"
+        android:textSize="46px" />
+
+    <!--btn_get_reward-->
+    <ImageView
+        android:id="@+id/get_reward"
+        android:layout_width="216px"
+        android:layout_height="78px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17px"
+        android:src="@drawable/get_reward_off"
+        />
+
+    <RelativeLayout
+        android:id="@+id/above_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pk_reward_bg_two"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/game_reward_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--学分奖励-->
+        <RelativeLayout
+            android:id="@+id/credit_layout"
+            android:layout_width="181px"
+            android:layout_height="149px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="148px">
+
+            <ImageView
+                android:layout_width="169px"
+                android:layout_height="149px"
+                android:src="@drawable/reward_credit_img" />
+
+            <TextView
+                android:id="@+id/credit_text"
+                android:layout_width="60px"
+                android:layout_height="62px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9px"
+                android:background="@drawable/reward_yuan"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <!--道具奖励-->
+        <RelativeLayout
+            android:id="@+id/prop_layout"
+            android:layout_width="181px"
+            android:layout_height="149px"
+            android:layout_marginRight="43px"
+            android:layout_marginTop="148px"
+            android:layout_toLeftOf="@+id/credit_layout">
+
+            <ImageView
+                android:id="@+id/prop_img"
+                android:layout_width="169px"
+                android:layout_height="149px"
+                android:src="@drawable/reward_credit_img" />
+
+            <TextView
+                android:id="@+id/prop_text"
+                android:layout_width="60px"
+                android:layout_height="62px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9px"
+                android:background="@drawable/reward_yuan"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <!--宠物卡奖励-->
+        <RelativeLayout
+            android:id="@+id/card_layout"
+            android:layout_width="181px"
+            android:layout_height="149px"
+            android:layout_marginLeft="43px"
+            android:layout_marginTop="148px"
+            android:layout_toRightOf="@+id/credit_layout">
+
+            <ImageView
+                android:id="@+id/card_img"
+                android:layout_width="169px"
+                android:layout_height="149px"
+                android:src="@drawable/reward_credit_img" />
+
+            <TextView
+                android:id="@+id/card_text"
+                android:layout_width="60px"
+                android:layout_height="62px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9px"
+                android:background="@drawable/reward_yuan"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30px"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/sure"
+            android:layout_width="216px"
+            android:layout_height="78px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17px"
+            android:background="@drawable/btn_reward_sure" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

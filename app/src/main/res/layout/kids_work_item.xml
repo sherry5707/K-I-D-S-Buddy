@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/work_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10px"
+    app:bga_sil_bottomMode="pullOut"
+    app:bga_sil_swipeDirection="left">
+
+    <LinearLayout
+        android:id="@+id/work_item"
+        android:layout_width="687px"
+        android:layout_height="265px"
+        android:background="@mipmap/work_item_bg"
+        android:orientation="horizontal">
+
+       <!-- <View
+            android:layout_width="14px"
+            android:layout_height="1px"
+            android:visibility="invisible" />-->
+
+
+        <TextView
+            android:id="@+id/work_item_content"
+            android:layout_width="320px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="18px"
+            android:layout_marginLeft="27px"
+            android:layout_marginTop="26px"
+            android:ellipsize="end"
+            android:lineSpacingExtra="12px"
+            android:maxLines="4"
+            android:textColor="#5A3B16"
+            android:textSize="30px" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:visibility="gone"
+            android:layout_width="180px"
+            android:layout_height="180px"
+            app:cardCornerRadius="14dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="36px"
+            >
+
+            <ImageView
+                android:id="@+id/work_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:scaleType="centerCrop" />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/work_item_finish_btn"
+                android:layout_width="62px"
+                android:layout_height="62px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35px"
+                android:background="@mipmap/work_finish_normal" />
+
+            <TextView
+                android:id="@+id/work_item_finish_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="已做完"
+                android:textColor="#FFD0A575"
+                android:textSize="26px" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                />
+
+            <ImageButton
+
+                android:id="@+id/work_item_play_btn"
+                android:layout_width="62px"
+                android:layout_height="62px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="34px"
+                android:background="@drawable/btn_work_play" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

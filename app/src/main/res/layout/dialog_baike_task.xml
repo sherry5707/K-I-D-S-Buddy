@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="596px"
+        android:layout_height="92px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9px"
+        android:background="@drawable/bg_dialog_baike">
+
+        <ImageView
+            android:id="@+id/dialog_baike_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/dialog_baike_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60px"
+            android:text="学习了一个百科知识，获得"
+            android:textColor="#FFFFFF"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/got_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="47px"
+            android:textColor="#FFFFFF"
+            android:textSize="34px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9px"
+            android:layout_toLeftOf="@+id/got_credit"
+            android:src="@drawable/credit_img" />
+    </RelativeLayout>
+
+</RelativeLayout>

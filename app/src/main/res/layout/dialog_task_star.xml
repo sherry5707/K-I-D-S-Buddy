@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/task_alert_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/star_count_image"
+            android:layout_width="480px"
+            android:layout_height="480px"
+            android:layout_gravity="center"
+            android:scaleType="center" />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="230px"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="15px"-->
+        <!--android:text="太棒了！"-->
+        <!--android:textColor="#FFFFFFFF"-->
+        <!--android:textSize="36px" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="300px"-->
+        <!--android:gravity="center"-->
+        <!--android:text="恭喜你获得小星星奖励"-->
+        <!--android:textColor="#FFFFFFFF"-->
+        <!--android:textSize="24px" />-->
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/task_alert_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="342px"
+            android:layout_height="342px"
+            android:layout_marginTop="69px"
+            android:background="@drawable/bg_task_dialog"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43px"
+                android:background="@mipmap/task_alert_face" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"
+                android:background="@mipmap/task_alert_fail" />
+
+            <Button
+                android:id="@+id/task_alert_retry"
+                android:layout_width="190px"
+                android:layout_height="46px"
+                android:layout_marginTop="22px"
+                android:background="@drawable/btn_task_alert"
+                android:text="再试一次"
+                android:textColor="#FFFFFF"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/task_alert_close"
+            android:layout_width="69px"
+            android:layout_height="69px"
+            android:layout_gravity="right"
+            android:layout_marginTop="70px"
+            android:scaleType="center"
+            android:src="@drawable/btn_alert_close" />
+
+    </FrameLayout>
+
+</FrameLayout>

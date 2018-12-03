@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/work_alert_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3px">
+
+    <LinearLayout
+        android:id="@+id/work_alert_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="17px"
+        android:background="@mipmap/work_dialog_item_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="12px">
+
+        <ImageView
+            android:id="@+id/work_alert_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28px"
+            android:background="@mipmap/work_alert_icon" />
+
+        <TextView
+            android:id="@+id/work_alert_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="33px"
+            android:layout_marginRight="47px"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="12px"
+            android:maxLines="2"
+            android:textColor="#FF5A3B17"
+            android:textSize="30px" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/qchat_messagesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/entrance_board"
+        android:overScrollMode="never"
+        app:incomingAvatarHeight="@dimen/chat_item_avatar_size"
+        app:incomingAvatarWidth="@dimen/chat_item_avatar_size"
+        app:incomingBubbleDrawable="@drawable/bg_custom_incoming_message_1"
+        app:outcomingBubbleDrawable="@drawable/bg_custom_outcoming_message"
+        app:incomingBubbleSingleLineDrawable="@drawable/bg_custom_incoming_message_1"
+        app:incomingBubbleMultiLineDrawable="@drawable/bg_custom_incoming_message_2"
+        app:outcomingTimeTextColor="@color/gray_dark_transparent"
+        app:incomingDefaultBubbleColor="@color/ivory"
+        app:incomingDefaultBubblePressedColor="@color/ivory_dark"
+        app:incomingDefaultBubbleSelectedColor="@color/gray"
+        app:incomingDefaultImageOverlayPressedColor="@color/black_10"
+        app:incomingDefaultImageOverlaySelectedColor="@color/gray_transparent"
+        app:incomingTextColor="@color/white"
+        app:incomingTextLinkColor="@color/green"
+        app:incomingTextSize="@dimen/chat_item_content_size"
+        app:outcomingDefaultBubbleColor="@color/green"
+        app:outcomingDefaultBubblePressedColor="@color/green_dark"
+        app:outcomingDefaultBubbleSelectedColor="@color/gray_dark_transparent"
+        app:outcomingDefaultImageOverlayPressedColor="@color/black_10"
+        app:outcomingDefaultImageOverlaySelectedColor="@color/gray_transparent"
+        app:outcomingTextColor="@color/black"
+        app:outcomingTextLinkColor="@color/brown"
+        app:outcomingTextSize="@dimen/chat_item_content_size"
+        app:textAutoLink="all"/>
+
+</RelativeLayout>

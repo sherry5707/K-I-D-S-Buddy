@@ -1,0 +1,182 @@
+<resources>
+
+    <style name="ThemeNight">
+        <item name="textSizeBig">80sp</item>
+        <item name="textColorBig">#FF0000FF</item>
+
+        <item name="textSizeSmall">50sp</item>
+        <item name="textColorSmall">#FF00FFFF</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/cornflower_blue</item>
+        <item name="colorPrimaryDark">@color/cornflower_blue_dark</item>
+        <item name="colorAccent">@color/cornflower_blue</item>
+    </style>
+
+    <style name="BlueThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cornflower_blue</item>
+        <item name="colorPrimaryDark">@color/cornflower_blue_dark</item>
+        <item name="colorAccent">@color/cornflower_blue</item>
+        <item name="android:windowAnimationStyle">@style/animation_translucent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="animation_translucent" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/fullscreen_enter</item>
+        <item name="android:windowExitAnimation">@anim/fullscreen_exit</item>
+    </style>
+
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green_dark</item>
+        <item name="colorAccent">@color/green</item>
+    </style>
+
+    <style name="Theme_Dialog_Recorder">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--//是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--/背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Theme_Button_Entrance" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">@dimen/entrance_btn_size</item>
+        <item name="android:layout_height">@dimen/entrance_btn_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/entrance_board_btn_textSize</item>
+        <item name="android:background">@drawable/entrance_homework_btn_selector</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Theme_Space_Entrance">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@color/gray_dark_transparent</item>
+    </style>
+
+    <style name="BlueTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BlueTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="BlueTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FullscreenDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+
+        <item name="android:windowEnterAnimation">@anim/chatalertdlg_enter</item>
+        <item name="android:windowExitAnimation">@anim/chatalertdlg_exit</item>
+    </style>
+
+    <style name="Theme_Dialog_Gift">
+        <item name="android:windowBackground">@drawable/gift_dialog</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--//是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--/背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Theme_Dialog_Task" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimAmount">0.4</item><!--透明度 0.0f到1.0f之间。1.0完全不透明，0.0f完全透明-->
+        <item name="android:windowAnimationStyle">@style/animation_translucent</item>
+    </style>
+
+    <style name="Theme_Dialog_Baike" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimAmount">0.0</item><!--透明度 0.0f到1.0f之间。1.0完全不透明，0.0f完全透明-->
+         <item name="android:windowAnimationStyle">@style/animation_baike</item>
+    </style>
+    <style name="animation_baike" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/baike_enter</item>
+        <item name="android:windowExitAnimation">@anim/baike_exit</item>
+    </style>
+
+    <style name="myProgressBarStyleLarge">
+        　　
+        <item name="android:indeterminateDrawable">@drawable/rotate_loading_icon</item>
+        <item name="android:indeterminateDuration">1500</item>
+        　　
+        <item name="android:minWidth">100px</item>
+        　　
+        <item name="android:maxWidth">100px</item>
+        　　
+        <item name="android:minHeight">100px</item>
+        　　
+        <item name="android:maxHeight">100px</item>
+    </style>
+
+    <style name="NetworkWarningDialogStyle" parent="Theme_Dialog_Recorder">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--//是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--/背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="DialogActivityTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimAmount">0.4</item><!--透明度 0.0f到1.0f之间。1.0完全不透明，0.0f完全透明-->
+        <item name="android:windowAnimationStyle">@style/MyAnimationActivity</item>
+    </style>
+
+    <style name="MyAnimationActivity" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/chatalertdlg_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/chatalertdlg_exit</item>
+    </style>
+
+</resources>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11px"
+    android:layout_marginLeft="18px"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="11px">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/kids_avatar" />
+
+    <LinearLayout
+        android:id="@+id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10px"
+        android:layout_toLeftOf="@+id/avatar"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+       <!-- <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:textColor="@color/gray_dark"
+            android:textSize="24px" />-->
+
+        <ImageButton
+            android:id="@+id/voice_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/voice_play_anim3" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/bubble"
+        android:layout_marginRight="20px"
+        android:text="2"
+        android:textColor="@color/gray_dark"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bubble"
+        android:layout_alignStart="@id/bubble"
+        android:layout_below="@id/bubble"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/header_time_blue"
+        android:textSize="@dimen/chat_item_time_size"
+        android:visibility="gone" />
+
+</RelativeLayout>

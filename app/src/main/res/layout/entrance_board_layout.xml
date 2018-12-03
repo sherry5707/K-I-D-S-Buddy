@@ -1,0 +1,40 @@
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/work_button"
+        style="@style/Theme_Button_Entrance"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginTop="35px"
+        android:background="@drawable/btn_work" />
+
+    <RadioButton
+        android:id="@+id/remind_button"
+        style="@style/Theme_Button_Entrance"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginTop="59px"
+        android:background="@drawable/btn_remind" />
+
+    <RadioButton
+        android:id="@+id/chat_button"
+        style="@style/Theme_Button_Entrance"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginTop="59px"
+        android:background="@drawable/btn_chat" />
+
+    <com.kinstalk.her.qchat.widget.QRecorderButton
+        android:id="@+id/voiceButton"
+        style="@style/Theme_Button_Entrance"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_marginTop="59px"
+        android:background="@drawable/btn_voice"
+        android:visibility="gone" />
+
+</RadioGroup>

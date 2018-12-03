@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="675px"
+        android:layout_height="127px"
+        android:layout_marginLeft="8px"
+        android:background="@drawable/bg_item_gift">
+
+        <TextView
+            android:id="@+id/gift_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="176px"
+            android:layout_marginTop="16px"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#5A3B17"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gift_name"
+            android:layout_marginLeft="176px"
+            android:layout_marginTop="3px"
+            android:textColor="#D0A575"
+            android:textSize="26px" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/star_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gift_item_stat_num"
+        android:gravity="center_vertical"
+        android:paddingLeft="64px"
+        android:textColor="#FFFFFF"
+        android:textSize="32px" />
+</RelativeLayout>

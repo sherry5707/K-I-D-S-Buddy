@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="386px"
+        android:layout_height="301px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_get_task_bg">
+
+        <!-- 内容-->
+        <RelativeLayout
+            android:layout_width="362px"
+            android:layout_height="196px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px">
+
+            <RelativeLayout
+                android:id="@+id/layout_success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="30px"
+                    android:drawableLeft="@drawable/credit_img"
+                    android:drawablePadding="10px"
+                    android:gravity="center"
+                    android:textColor="#1AFFFC"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/content_success"
+                    android:layout_width="295px"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/num"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="12px"
+                    android:gravity="center"
+                    android:textColor="#1AFFFC"
+                    android:textSize="30px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/content_fail"
+                    android:layout_width="295px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#1AFFFC"
+                    android:textSize="30px" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="220px"
+            android:layout_height="58px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21px"
+            android:background="@drawable/task_dialog_sure"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

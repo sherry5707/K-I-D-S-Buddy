@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="264px"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/card_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/card_img_default" />
+
+    <ImageView
+        android:id="@+id/card_rare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/card_rare" />
+
+    <TextView
+        android:id="@+id/card_num"
+        android:layout_width="80px"
+        android:layout_height="77px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5px"
+        android:layout_marginTop="4px"
+        android:background="@drawable/prop_right"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28px" />
+
+</RelativeLayout>

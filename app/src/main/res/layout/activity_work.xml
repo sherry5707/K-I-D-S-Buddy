@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/work_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/kids_bg_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="687px"
+            android:layout_height="265px"
+            android:layout_marginBottom="120px"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="63px"
+            android:layout_marginTop="95px"
+            android:clipChildren="false">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/work_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFFFF">
+
+        <LinearLayout
+            android:id="@+id/work_remind_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="98px"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/work_content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="晚上7点前"
+                android:layout_marginLeft="34px"
+                android:textColor="#F9A825"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完成作业，获得"
+                android:textColor="#5A3B16"
+                android:textSize="30px" />
+
+            <ImageView
+                android:id="@+id/work_content_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/star_1" />
+
+            <TextView
+                android:id="@+id/work_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200个"
+                android:textColor="#FF303030"
+                android:textSize="28px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/work_finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="18px"
+            android:background="@mipmap/btn_work_finish_normal"
+            android:gravity="center"
+            android:text="打卡"
+            android:paddingTop="14px"
+            android:paddingBottom="14px"
+            android:paddingLeft="31px"
+            android:paddingRight="31px"
+            android:textColor="#C35527"
+            android:textSize="24px" />
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/yet_card"
+            android:layout_width="wrap_content"
+            android:layout_height="98px"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical">
+            <TextView
+                android:text="已打卡，获得星星"
+                android:textColor="#5A3B16"
+                android:textSize="28px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="38px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/star_1" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/work_no_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="记得按时完成老师布置的作业哦"
+        android:textColor="#749CBF"
+        android:textSize="30px" />
+
+    <ImageButton
+        android:id="@+id/work_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/btn_back" />
+
+    <TextView
+        android:id="@+id/work_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22px"
+        android:text="今日作业"
+        android:textColor="#FF005A98"
+        android:textSize="38px" />
+
+</FrameLayout>

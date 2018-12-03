@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/kids_bg_2">
+
+    <ScrollView
+        android:scrollbarThumbVertical="@drawable/scrollbar_ver_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="42px"
+            android:layout_marginTop="34px"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview"
+                app:cardCornerRadius="14dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="42px"
+                android:layout_marginRight="54px"
+                android:layout_height="238px">
+            <ImageView
+                android:id="@+id/work_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/work_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="24px"
+                android:fadeScrollbars="true"
+                android:layout_marginRight="60px"
+                android:layout_marginLeft="48px"
+                android:lineSpacingExtra="25px"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:textColor="#182F43"
+                android:textSize="30px" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <ImageButton
+        android:id="@+id/work_detail_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/btn_back" />
+
+
+    <ImageButton
+        android:id="@+id/work_detail_play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="38px"
+        android:layout_marginRight="41px"
+        android:background="@drawable/btn_work_play" />
+    <ImageButton
+        android:id="@+id/work_detail_close_nopic"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="8px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/btn_close" />
+
+</FrameLayout>

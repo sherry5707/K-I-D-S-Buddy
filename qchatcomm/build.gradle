@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories{
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    provided 'com.kinstalk.common:kinstalk-common:+'
+    // Android Support
+    api  "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    api  "com.android.support:design:$rootProject.supportLibraryVersion"
+    api  "com.android.support:percent:$rootProject.supportLibraryVersion"
+    // multidex
+    api  "com.android.support:multidex:$rootProject.supportMultidex"
+    // Retrofit2
+    api  "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    api  "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    // RxAndroid
+    //    implementation "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofitVersion"
+    //    implementation "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    //    implementation "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    // Okhttp3
+    api  "com.squareup.okhttp3:okhttp:$rootProject.okhttp3Version"
+    api  "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp3LoggingVersion"
+    // Gson
+    api  "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+//    implementation(name: 'countlysdk', ext: 'aar')
+    api  'org.greenrobot:greendao:3.2.2'
+    api  'com.jsoniter:jsoniter:0.9.17'
+    api  ('com.amazonaws:aws-android-sdk-s3:2.6.+'){
+        exclude group : 'com.google.code.gson'
+    }
+
+    //Glide
+    api 'com.github.bumptech.glide:glide:3.7.0'
+
+    //ImageViews
+    api "de.hdodenhof:circleimageview:$circleImageViewVersion"
+    api "com.github.siyamed:android-shape-imageview:$shapeImageViewVersion"
+
+    //Utils
+    api "me.relex:circleindicator:$circleindicatorVersion"
+    //    implementation 'org.javassist:javassist:3.22.0-GA'
+    api 'org.greenrobot:eventbus:3.1.1'
+
+    api 'com.lovedise:permissiongen:0.0.6'
+
+    api project(':chatkit')
+}

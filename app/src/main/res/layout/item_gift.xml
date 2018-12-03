@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="675px"
+        android:layout_height="127px"
+        android:layout_marginLeft="8px"
+        android:background="@drawable/bg_item_gift">
+
+        <TextView
+            android:id="@+id/gift_name"
+            android:layout_width="241px"
+            android:layout_height="84px"
+            android:layout_marginLeft="145px"
+            android:layout_marginTop="12px"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="#5A3B17"
+            android:textSize="30px" />
+
+        <Button
+            android:id="@+id/image_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="19px"
+            android:layout_marginTop="14px"
+            android:gravity="left"
+            android:paddingLeft="19px"
+            android:paddingTop="11px"
+            android:text="想要"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/text_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="37px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginRight="19px"
+            android:gravity="center"
+            android:text="点击发送心愿给家长"
+            android:textColor="#D0A575"
+            android:textSize="24px" />
+
+        <RelativeLayout
+            android:id="@+id/getting_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16px">
+
+            <Button
+                android:id="@+id/image_cancel"
+                android:layout_width="62px"
+                android:layout_height="62px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="24px"
+                android:background="@drawable/gift_image_cancel" />
+
+            <TextView
+                android:id="@+id/text_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/image_cancel"
+                android:layout_marginRight="18px"
+                android:text="不要了"
+                android:textColor="#D0A575"
+                android:textSize="26px" />
+
+            <Button
+                android:id="@+id/image_get"
+                android:layout_width="62px"
+                android:layout_height="62px"
+                android:layout_marginRight="51px"
+                android:layout_toLeftOf="@+id/image_cancel"
+                android:background="@drawable/gift_image_get" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_get"
+                android:layout_toLeftOf="@+id/text_cancel"
+                android:layout_marginRight="38px"
+                android:text="已领取"
+                android:textColor="#D0A575"
+                android:textSize="26px" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/star_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gift_item_stat_num"
+        android:gravity="center_vertical"
+        android:paddingLeft="64px"
+        android:textColor="#FFFFFF"
+        android:textSize="32px" />
+
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.WakeUpActivity">
+
+
+    <AdapterViewFlipper
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/startImageView1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wakeup_star" />
+
+        <ImageView
+            android:id="@+id/startImageView2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wakeup_star" />
+
+        <ImageView
+            android:id="@+id/startImageView3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wakeup_star" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="137dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="13dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="0.9"
+        android:textColor="#FFF"
+        android:textSize="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:background="@drawable/wake_up_sign_selector" />
+
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+    <Button
+        android:id="@+id/signButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:onClick="signButtonClick" />
+
+    <com.kinstalk.her.qchat.progressbar.CircleProgressView
+        android:id="@+id/circleView"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        CircleProgressView:cpv_autoTextSize="true"
+        CircleProgressView:cpv_barColor="#ff14aef8"
+        CircleProgressView:cpv_barWidth="37dp"
+        CircleProgressView:cpv_innerContourSize="0dp"
+        CircleProgressView:cpv_maxValue="20"
+        CircleProgressView:cpv_outerContourSize="0dp"
+        CircleProgressView:cpv_rimColor="#28FFFFFF"
+        CircleProgressView:cpv_rimWidth="37dp"
+        CircleProgressView:cpv_seekMode="true"
+        CircleProgressView:cpv_showUnit="true"
+        CircleProgressView:cpv_spinColor="#ff14aef8"
+        CircleProgressView:cpv_text="打卡"
+        CircleProgressView:cpv_textColor="#FFFFFF"
+        CircleProgressView:cpv_textScale="1"
+        CircleProgressView:cpv_textSize="12dp"
+        CircleProgressView:cpv_unit="%"
+        CircleProgressView:cpv_unitColor="#0000"
+        CircleProgressView:cpv_value="0" />
+    <ImageView
+        android:id="@+id/wakeup_timer"
+        android:layout_width="538px"
+        android:layout_height="480px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/wakeup_timer_animation"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/wakeup_timer_sign_btn"
+        android:layout_width="181px"
+        android:layout_height="74px"
+        android:layout_marginTop="189dp"
+        android:layout_marginLeft="208dp"
+        android:background="@drawable/wakeup_timer_btn_animation"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/signTimeoutImage"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/sign_timeout1" />
+
+    <TextView
+        android:id="@+id/signTimeoutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/sign_timeout"
+        android:text="@string/sign_timeout_text"
+        android:textSize="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+
+</RelativeLayout>

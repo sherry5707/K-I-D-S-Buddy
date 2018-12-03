@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11px"
+    android:layout_marginLeft="@dimen/chat_incomeavatar_marginleft"
+    android:layout_marginRight="18px"
+    android:layout_marginTop="11px">
+
+    <!--<com.stfalcon.chatkit.utils.ShapeImageView-->
+    <!--android:id="@id/messageUserAvatar"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_above="@+id/time"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"/>-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+
+        android:layout_marginRight="@dimen/chat_incomeavatar_marginright"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/incoming_avatar" />
+
+    <LinearLayout
+        android:id="@+id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:layout_toRightOf="@+id/avatar"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/voice_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/voice_play_in_anim3" />
+
+       <!-- <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:textColor="@color/white"
+            android:textSize="24px" />-->
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/duration"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/bubble"
+        android:layout_marginLeft="20px"
+        android:text="2"
+        android:textColor="@color/gray_dark"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/bubble"
+        android:layout_alignRight="@id/bubble"
+        android:layout_below="@id/bubble"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/header_time_blue"
+        android:textSize="@dimen/chat_item_time_size"
+        android:visibility="gone" />
+
+</RelativeLayout>

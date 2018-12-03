@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.kinstalk.her.qchat.widget.SwipeItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/remind_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:bga_sil_bottomMode="pullOut"
+    app:bga_sil_swipeDirection="left">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="150px"
+            android:layout_height="1px" />
+
+        <TextView
+            android:id="@+id/remind_item_delete"
+            android:layout_width="150px"
+            android:layout_height="158px"
+            android:background="#F35568"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:textSize="36px" />
+
+        <View
+            android:layout_width="150px"
+            android:layout_height="17px" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/remind_item_bg_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/remind_item_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/remind_item_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25px"
+                android:paddingBottom="12px" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23px"
+                android:orientation="vertical"
+                android:paddingBottom="32px">
+
+                <TextView
+                    android:id="@+id/remind_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="62px"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:textColor="#FF5A3B17"
+                    android:textSize="44px" />
+
+                <TextView
+                    android:id="@+id/remind_item_content"
+                    android:layout_width="357px"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/remind_item_time"
+                    android:layout_marginTop="9px"
+                    android:maxEms="10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#FF5A3B17"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/remind_item_ampm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="17px"
+                    android:layout_toRightOf="@+id/remind_item_time"
+                    android:textColor="#FF5A3B17"
+                    android:textSize="24px" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/remind_item_star_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="49px"
+            android:orientation="horizontal"
+            android:paddingBottom="12px">
+
+            <ImageView
+                android:id="@+id/remind_item_star_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/star_2" />
+
+            <ImageView
+                android:id="@+id/remind_item_star_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:background="@mipmap/star_2" />
+
+            <ImageView
+                android:id="@+id/remind_item_star_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:background="@mipmap/star_2" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</com.kinstalk.her.qchat.widget.SwipeItemLayout>

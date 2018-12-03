@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">亲见作业</string>
+    <!--<string name="entrance_label_emoji">😃</string>-->
+    <string name="entrance_label_emoji">表情</string>
+    <string name="entrance_label_homework">作业</string>
+    <string name="entrance_label_remind">提醒</string>
+    <string name="entrance_label_chat">聊天</string>
+    <string name="entrance_label_voice">语音</string>
+    <string name="homework_title">%1$s 作业</string>
+    <string name="remind_title">%1$s 提醒</string>
+    <string name="label_close">关闭</string>
+    <string name="copied_message">消息已复制!</string>
+    <string name="action_delete">删除</string>
+    <string name="action_copy">复制</string>
+
+    <string name="recorder_normal">按住说话</string>
+    <string name="recorder_recording">松开结束</string>
+    <string name="recorder_want_cancel">松开手指，取消发送</string>
+    <string name="recorder_dialog_want_cancel">手指上滑，取消发送</string>
+    <string name="recorder_dialog_want_send">手指上滑，取消发送</string>
+    <string name="recorder_dialog_time_short">录音时间过短!</string>
+
+    <string name="warning_sd_not_found">SD卡不存在，请插入SD卡！</string>
+    <string name="warning_sd_free_not_enough">SD卡存储空间不足！</string>
+    <string name="title_activity_qrcode">QRCodeActivity</string>
+    <string name="req_record_permission_failed">录音权限申请失败！</string>
+    <string name="qrcore_tip_text1">1.打开微信，扫描上方二维码</string>
+    <string name="qrcore_tip_text2">2.关注[亲见好童学]公众号</string>
+    <string name="binding_success">绑定成功</string>
+    <string name="unbind_sucess">解绑成功</string>
+    <string name="already_binded">您已绑定该设备，无需再次绑定</string>
+    <string name="need_neetwork">请连接网络后，再来打卡哦</string>
+    <string name="qrcore_title_text">微信扫码绑定</string>
+    <string name="no_network">无网络，不能发送语音消息，请检查网络</string>
+
+    <!--gift-->
+    <string name="title_star">礼物中心</string>
+    <string name="title_receive">已领取</string>
+    <string name="can_receive">可领取</string>
+    <string name="receive">领取</string>
+    <string name="receive_gifts">收到礼物</string>
+    <string name="cancel_receive">取消领取</string>
+    <string name="toast_no_exchange">星星数量不足，不能领取，继续加油哦</string>
+    <string name="toast_one_exchange">每次只能申请领取一个礼物哦</string>
+    <string name="toast_sure_exchange">确定收到这个礼物了吗？</string>
+    <string name="not_yet">还没有</string>
+    <string name="now_received">已收到</string>
+    <string name="no_gift">爸爸妈妈还没有为你准备礼物哦，\n赶快和他们一起设置礼物吧</string>
+    <string name="no_receive_gift">还没有领取过礼物</string>
+    <string name="sure">确认</string>
+    <string name="cancel">取消</string>
+    <string name="no_network_gift">当前没有可用网络！</string>
+
+    <!--重新绑定微信公众号-->
+    <string name="qrcore_tip_rebind">微信扫描二维码，即可绑定本设备。
+    绑定后原账号将与该设备解除绑定，但原账号内正在进行的习惯、已获得的星星、已添加的提醒事项将被清除，且无法恢复，请您慎重操作！</string>
+
+    <string name="network_disconnect_warnning">网络连接已断开</string>
+    <string name="set_network">设置网络</string>
+
+    <string name="privacy_warnning">语音唤醒已被关闭，点击唤醒</string>
+    <string name="privacy_close_tips">现在我们可以聊天啦</string>
+    <string name="tip_empty_translation">在这里可以查看所有的翻译历史</string>
+
+    <string name="wake_up_three_scene">现在为你播放每日小故事了，你可以边听故事边起床哦，如果能自己穿好衣服，就更棒啦！</string>
+    <string name="wake_up_four_scene">每日小故事已经播放完毕，赶快点击屏幕确认起床吧。</string>
+    <string name="sign_timeout_text">呜呜~没有按时打卡</string>
+</resources>

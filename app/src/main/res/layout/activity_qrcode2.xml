@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.kinstalk.her.qchat.QRCodeActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:text="@string/qrcore_title_text"
+        android:textColor="#000000"
+        android:layout_marginTop="24px"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        />
+
+    <RelativeLayout
+        android:id="@+id/back_layout"
+        android:layout_width="100px"
+        android:layout_height="100px">
+
+        <Button
+            android:id="@+id/back_button"
+            android:background="@drawable/qrcode_back"
+            android:layout_height="26px"
+            android:layout_width="16px"
+            android:layout_marginTop="34px"
+            android:layout_marginLeft="34px" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="85px"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="225px"
+                android:layout_height="225px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30px"
+                app:srcCompat="@drawable/bg_custom_incoming_message" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21px"
+                android:text="@string/qrcore_tip_text1"
+                android:textColor="#000000"
+                android:layout_marginTop="44px"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/haotongxue_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="106px"
+            >
+
+            <ImageView
+                android:id="@+id/htximageView"
+                android:layout_width="182px"
+                android:layout_height="287px"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/qrcore_wx" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21px"
+                android:text="@string/qrcore_tip_text2"
+                android:textColor="#000000"
+                android:layout_marginTop="13px"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

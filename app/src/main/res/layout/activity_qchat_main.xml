@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/entrance_board"
+        layout="@layout/entrance_board_layout"
+        android:layout_width="@dimen/entrance_board_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/qchat_now_time"
+        android:layout_width="@dimen/entrance_board_width"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/entrance_board"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal|bottom"
+        android:textColor="@color/black"
+        android:textSize="@dimen/entrance_board_time_textSize" />
+
+    <com.kinstalk.her.qchat.widget.QViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/entrance_board"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <!--<com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/qchat_messagesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/entrance_board"
+        app:incomingAvatarHeight="56dp"
+        app:incomingAvatarWidth="56dp"
+        app:incomingBubbleDrawable="@drawable/bg_custom_incoming_message"
+        app:outcomingBubbleDrawable="@drawable/bg_custom_outcoming_message"
+        app:outcomingTimeTextColor="@color/gray_dark_transparent"
+        app:incomingDefaultBubbleColor="@color/ivory"
+        app:incomingDefaultBubblePressedColor="@color/ivory_dark"
+        app:incomingDefaultBubbleSelectedColor="@color/gray"
+        app:incomingDefaultImageOverlayPressedColor="@color/black_10"
+        app:incomingDefaultImageOverlaySelectedColor="@color/gray_transparent"
+        app:incomingTextColor="@color/white"
+        app:incomingTextLinkColor="@color/green"
+        app:incomingTextSize="18sp"
+        app:outcomingDefaultBubbleColor="@color/green"
+        app:outcomingDefaultBubblePressedColor="@color/green_dark"
+        app:outcomingDefaultBubbleSelectedColor="@color/gray_dark_transparent"
+        app:outcomingDefaultImageOverlayPressedColor="@color/black_10"
+        app:outcomingDefaultImageOverlaySelectedColor="@color/gray_transparent"
+        app:outcomingTextColor="@color/black"
+        app:outcomingTextLinkColor="@color/brown"
+        app:outcomingTextSize="18sp"
+        app:textAutoLink="all"/>-->
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/entrance_board"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/gray_light"/>-->
+
+    <!--by king emoji delete-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/emoji_panel"-->
+    <!--android:layout_width="360dp"-->
+    <!--android:layout_height="270dp"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_centerInParent="true">-->
+    <!--<io.github.rockerhieu.emojicon.EmojiconTextView-->
+    <!--android:id="@+id/txtEmojicon"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=""-->
+    <!--android:visibility="invisible"-->
+    <!--emojicon:emojiconAlignment="baseline" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_gravity="center_horizontal">-->
+    <!--<io.github.rockerhieu.emojicon.EmojiconEditText-->
+    <!--android:id="@+id/editEmojicon"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint=""-->
+    <!--android:text=""-->
+    <!--emojicon:emojiconSize="20sp" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/emojicons"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--emojicon:emojiconSize="20sp"/>-->
+
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

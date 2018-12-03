@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25px"
+        android:layout_marginRight="24px"
+        android:layout_marginTop="55px"
+        android:text="@string/toast_sure_exchange"
+        android:textColor="#CC000000"
+        android:textSize="29px" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29px"
+        android:layout_marginTop="44px">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="131px"
+            android:layout_height="40px"
+            android:background="@drawable/gift_dialog_cancel"
+            android:text="@string/cancel"
+            android:textColor="#0077FF"
+            android:textSize="20px" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="131px"
+            android:layout_height="40px"
+            android:layout_marginLeft="29px"
+            android:layout_toRightOf="@+id/btn_cancel"
+            android:background="@drawable/gift_dialog_sure"
+            android:text="@string/sure"
+            android:textColor="#ffffff"
+            android:textSize="20px" />
+    </RelativeLayout>
+</RelativeLayout>

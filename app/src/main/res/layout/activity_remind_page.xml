@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remind_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/kids_bg_2">
+
+    <!--右边数量，星星-->
+    <RelativeLayout
+        android:id="@+id/star_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13px"
+        android:layout_marginLeft="625px"
+        android:layout_centerVertical="true"
+        android:background="@drawable/gift_star_bg">
+
+        <TextView
+            android:id="@+id/star_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="54px"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="32px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+        <com.kinstalk.her.qchat.view.TouchableRecyclerView
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="392px"
+            android:layout_marginBottom="0px"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="88px"
+            android:overScrollMode="never">
+
+        </com.kinstalk.her.qchat.view.TouchableRecyclerView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/remind_no_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="在这里可以看到每天要做的事情哦"
+        android:textColor="#749CBF"
+        android:textSize="30px" />
+
+    <ImageButton
+        android:id="@+id/remind_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8px"
+        android:layout_marginTop="13px"
+        android:background="@drawable/btn_back" />
+
+    <ImageView
+        android:id="@+id/remind_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0px"
+        android:text="熊孩子的一天"
+        android:background="@drawable/remind_title"
+        android:textColor="#FF5A3B16"
+        android:textSize="28px" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="24px"
+        android:text="熊孩子的一天"
+        android:textColor="#FF5A3B16"
+        android:textSize="28px" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="464px"
+        android:background="@drawable/remind_line" />
+
+</FrameLayout>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kinstalk.her.qchat">
+
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+
+    <!-- Baidu Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- Baidu push 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REBOOT" />
+
+    <!-- Baidu push 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.kinstalk.her.qchat" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.kinstalk.her.qchat"
+        android:protectionLevel="normal" />
+
+    <permission
+        android:name="com.kinstalk.her.qchat.PROVIDER"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".QchatApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BlueTheme">
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <receiver android:name=".messaging.MessageReceiver">
+            <intent-filter>
+                <action android:name="com.tencent.tac.messaging.action.CALLBACK" />
+            </intent-filter>
+        </receiver>
+        <!--完成百科任务广播-->
+        <receiver android:name=".receive.TaskReceive">
+            <intent-filter>
+                <action android:name="com.kinstalk.her.qchat.receive.TaskReceive" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".messaging.QchatBroadcast">
+            <intent-filter android:priority="1000">
+                <action android:name="com.kinstalk.her.qchat.bind_status" />
+                <action android:name="com.kinstalk.her.qchat.qrcode" />
+                <action android:name="com.kinstalk.her.qchat.clearhome" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="com.kinstalk.her.qchat.activate.fail" />
+                <action android:name="com.kinstalk.her.qchat.switch.wx" />
+                <action android:name="com.kinstalk.her.update.launcher.reminder" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".remind.ReminderReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.EVENT_REMINDER" />
+                <action android:name="android.intent.action.TIME_SET" />
+
+                <data android:scheme="content" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".messaging.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="ly.count.android.sdk.ReferrerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.BootCompletedReceiver">
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".QRCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/BlueThemeNoActionBar">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <category android:name="android.intent.category.HOME" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".AlarmActivity"
+            android:launchMode="singleInstance" />
+
+        <receiver android:name=".activity.SleepAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.kinstalk.her.qchat.sleep.clock" />
+                <action android:name="com.kinstalk.her.qchat.bind_status" />
+                <action android:name="kinstalk.com.aicore.action.txsdk.bind_status" />
+                <action android:name="com.kinstalk.her.qchat.wakeup.clock" />
+                <action android:name="com.kinstalk.her.qchat.remove.privacy.clock" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".homework.WorkAlertActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.work.alert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".homework.WorkDetailDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.work.diag"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".homework.WorkImageDetailDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.work.diag"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".WorkActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.work.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <activity
+            android:name=".RemindActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.rimind.task"
+            android:theme="@style/BlueThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RemindCustomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.rimind.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <!--PK所有activity的父类-->
+        <activity
+            android:name=".PKBaseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.pkbase.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <!--PK游戏-->
+        <activity
+            android:name=".PKStartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.pkstart.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <!--选择宠物界面-->
+        <activity
+            android:name=".activity.ChoosePetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.choose.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <!--等待界面-->
+        <activity
+            android:name=".activity.PKWaitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.wait.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <!--PK主界面-->
+        <activity
+            android:name=".activity.PKMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.pkmain.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <activity
+            android:name=".activity.PKRewardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.pkreward.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <!-- 礼物中心 -->
+        <activity
+            android:name=".GiftActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.gift.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+        <!--百科-->
+        <activity
+            android:name=".activity.WikipediaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.wikipedia.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+        <!--获取卡片-->
+        <activity
+            android:name=".activity.GetCardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.card.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+        <!--获取道具卡片-->
+        <activity
+            android:name=".activity.GetPropCardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.propcard.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+        <!--dialog样式activity领取学分-->
+        <activity
+            android:name=".activity.DialogTaskActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.credit.dialog.task"
+            android:theme="@style/Theme_Dialog_Task" />
+        <!--dialog样式activity百科学分-->
+        <activity
+            android:name=".activity.DialogBaikeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.baike.dialog.task"
+            android:theme="@style/Theme_Dialog_Baike" />
+        <activity
+            android:name=".activity.SleepActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.sleep.task"
+            android:theme="@style/BlueThemeNoActionBar"></activity>
+
+        <activity
+            android:name=".activity.WakeUpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.wakeup.task"
+            android:theme="@style/BlueThemeNoActionBar"></activity>
+
+        <activity
+            android:name=".ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.chat.task"
+            android:theme="@style/BlueThemeNoActionBar">
+            <!--<intent-filter android:priority="100">
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.HOME" />
+            </intent-filter>-->
+
+        </activity>
+
+        <activity
+            android:name=".activity.TaskSleepOrWakeupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.sleepwakeup.task"
+            android:theme="@style/BlueThemeNoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".VoiceAssistantActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.kids.task"
+            android:theme="@style/BlueThemeNoActionBar">
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<category android:name="android.intent.category.HOME" />-->
+            <!--</intent-filter>-->
+
+        </activity>
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name=".messaging.BaiduPushMessageReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+        <service
+            android:name=".activity.AIService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".voiceresponse.VoiceResponseService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.InitService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".voiceresponse.MSGVoiceResponseService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".voiceresponse.GiftVoiceResponseService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".activity.KidsService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VOICE_COMMAND" />
+
+                <data
+                    android:scheme="kinstakAI"
+                    android:sspPrefix="//sleepmode" />
+                <data
+                    android:scheme="kinstakAI"
+                    android:sspPrefix="//gift" />
+            </intent-filter>
+        </service>
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.kinstalk.her.qchat.bdpush"
+            android:exported="true"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.kinstalk.her.qchat" />
+
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data
+            android:name="api_key"
+            android:value="8GKO12nY2XhWGZUBq5Nk8xxQ" />
+
+        <activity
+            android:name=".activity.SleepModeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/BlueThemeNoActionBar"></activity>
+
+        <activity
+            android:name=".ChangeWxAccountActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.activity.qrcode.switch"
+            android:theme="@style/BlueThemeNoActionBar"></activity>
+
+        <activity
+            android:name=".skillscenter.SkillsCenterActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.skillscenter.task"
+            android:theme="@style/BlueThemeNoActionBar">
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<category android:name="android.intent.category.HOME" />-->
+            <!--</intent-filter>-->
+
+        </activity>
+
+        <activity
+            android:name=".library.VoiceBookActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.activity.library.task"
+            android:theme="@style/BlueThemeNoActionBar" />
+
+        <provider
+            android:name=".translation.GlobalProvider"
+            android:authorities="com.kinstalk.her.qchat"
+            android:exported="true"
+            android:permission="com.kinstalk.her.qchat.PROVIDER" />
+
+    </application>
+
+</manifest>

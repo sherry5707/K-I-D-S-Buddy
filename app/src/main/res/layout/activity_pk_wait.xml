@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pk">
+
+    <ImageView
+        android:layout_width="460px"
+        android:layout_height="104px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90px"
+        android:src="@drawable/center_pk" />
+    <!--宠物空-->
+    <ImageView
+        android:layout_width="109px"
+        android:layout_height="94px"
+        android:layout_marginLeft="199px"
+        android:layout_marginTop="59px"
+        android:src="@drawable/bg_pk_kong" />
+
+    <!--头像空-->
+    <ImageView
+        android:id="@+id/img_avatar_kong"
+        android:layout_width="198px"
+        android:layout_height="199px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/avatar_pk_kong" />
+
+    <!--宠物img-->
+    <ImageView
+        android:id="@+id/img_pet"
+        android:layout_width="109px"
+        android:layout_height="94px"
+        android:layout_marginLeft="199px"
+        android:layout_marginTop="59px" />
+
+    <!--头像img "-->
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="120px"
+        android:layout_height="121px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40px"
+        android:src="@drawable/avatar_pk_default" />
+
+    <!--用户名-->
+    <TextView
+        android:id="@+id/pk_name"
+        android:layout_width="120px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="210px"
+        android:layout_marginTop="121px"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18px" />
+
+    <TextView
+        android:id="@+id/wait_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_avatar_kong"
+        android:layout_centerHorizontal="true"
+        android:text="正在等待其他宝宝进入考场..."
+        android:textColor="#FFFFFF"
+        android:textSize="32px" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wait_text"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        android:textSize="100px" />
+
+    <TextView
+        android:id="@+id/forecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:text="预计 00:10"
+        android:textColor="#FFFFFF"
+        android:textSize="28px" />
+
+    <TextView
+        android:id="@+id/remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forecast"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15px"
+        android:textColor="#5AFBE1"
+        android:textSize="24px" />
+</RelativeLayout>

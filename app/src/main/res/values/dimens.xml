@@ -1,0 +1,106 @@
+<resources>
+    <dimen name="entrance_board_width">140px</dimen>
+    <dimen name="entrance_btn_size">70px</dimen>
+    <dimen name="entrance_btn_voice_size">100px</dimen>
+    <dimen name="entrance_voice_marginBottom">20px</dimen>
+    <dimen name="entrance_emoji_marginBottom">10px</dimen>
+    <dimen name="entrance_remind_marginBottom">10px</dimen>
+    <dimen name="entrance_homework_marginTop">33px</dimen>
+    <dimen name="entrance_time_marginTop">30px</dimen>
+    <dimen name="main_time_height">100dp</dimen>
+    <dimen name="entrance_board_btn_textSize">16sp</dimen>
+    <dimen name="entrance_board_time_textSize">32px</dimen>
+    <dimen name="homework_title_text_size">18sp</dimen>
+    <dimen name="homework_content_text_size">14sp</dimen>
+    <dimen name="voice_player_size">24dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="work_item_content_size">26px</dimen>
+    <dimen name="work_item_date_size">16px</dimen>
+    <dimen name="work_header_date_size">20px</dimen>
+    <dimen name="work_detail_title_size">28px</dimen>
+    <dimen name="work_detail_content_size">32px</dimen>
+    <dimen name="remind_item_content_size">42px</dimen>
+    <dimen name="remind_item_date_size">31px</dimen>
+    <dimen name="chat_item_content_size">28px</dimen>
+    <dimen name="chat_item_avatar_size">64px</dimen>
+    <dimen name="chat_item_time_size">18px</dimen>
+    <dimen name="work_alert_tile_size">28px</dimen>
+    <dimen name="work_alert_content_size">26px</dimen>
+    <dimen name="work_alert_button_size">22px</dimen>
+    <dimen name="chat_alert_content_size">26px</dimen>
+    <dimen name="chat_alert_date_size">28px</dimen>
+    <!--聊天界面incom头像左边距-->
+    <dimen name="chat_incomeavatar_marginleft">54px</dimen>
+    <!--聊天界面incom头像右边距-->
+    <dimen name="chat_incomeavatar_marginright">3px</dimen>
+
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_19">19dp</dimen>
+
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_21">21dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_27">27dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_29">29dp</dimen>
+
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_31">31dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_33">33dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_37">37dp</dimen>
+    <dimen name="dp_38">38dp</dimen>
+    <dimen name="dp_39">39dp</dimen>
+
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_41">41dp</dimen>
+    <dimen name="dp_42">42dp</dimen>
+    <dimen name="dp_43">43dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_46">46dp</dimen>
+    <dimen name="dp_47">47dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_49">49dp</dimen>
+
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_51">51dp</dimen>
+    <dimen name="dp_52">52dp</dimen>
+    <dimen name="dp_53">53dp</dimen>
+    <dimen name="dp_54">54dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_57">57dp</dimen>
+    <dimen name="dp_58">58dp</dimen>
+    <dimen name="dp_59">59dp</dimen>
+
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_19">19sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp_25">25sp</dimen>
+</resources>

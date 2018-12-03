@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/network_warning_layout"
+    android:layout_width="match_parent"
+    android:layout_height="126px"
+    android:background="@color/network_disconnect_warnning_bg"
+    android:clickable="false"
+    android:focusable="false"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52px"
+        android:layout_marginRight="21px"
+        android:src="@drawable/network_warning_icon" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/network_disconnect_warnning"
+        android:textColor="@color/white"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/set_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36px"
+        android:background="@drawable/network_disconnect_btn"
+        android:gravity="center"
+        android:text="@string/set_network"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+package com.kinstalk.her.qchat.activity;
+
+public interface AICoreDefine {
+     String GET_DATA_CMD_STR = "cmd";
+     String GET_DATA_CMD_GET_OWNER = "getOwner";
+     String GET_DATA_CMD_ERASE_ALL_BINDERS = "eraseAllBinders";
+     String GET_DATA_EGG_CLICK = "eggClick";
+     String JSON_OWNERINFO_FIELD_URL = "headUrl";
+     String JSON_OWNERINFO_FIELD_REMARK = "remark";
+     String JSON_OWNERINFO_FIELD_TYPE = "type";
+     String JSON_OWNERINFO_FIELD_CONTACT_TYPE = "contactType";
+     String JSON_OWNERINFO_FIELD_SN = "sn";
+     String AI_JSON_FIELD_TYPE = "type";
+     String AI_JSON_FIELD_PACKAGE = "pkg";
+     String AI_JSON_FIELD_SERVICECLASS = "svcClass";
+     String AI_JSON_FIELD_DEFAULTCLIENT = "isDefault";
+     String AI_JSON_PLAYTEXT_TEXT = "text";
+     String AI_JSON_PLAYTEXT_SPEED = "speed";
+     String AI_JSON_PLAYTEXT_ROLE = "role";
+     String AI_FIELD_TEXT_QUESTION = "textQuestion";
+     String AI_FIELD_TEXT_ANSWER = "textAnswer";
+     String ACTION_TXSDK_TTS = "kinstalk.com.aicore.action.txsdk.tts";
+     String ACTION_TXSDK_EXTRA_TTS_STATE = "kinstalk.com.aicore.action.txsdk.tts_state";
+     String ACTION_TXSDK_EXTRA_TTS_STOP = "stop";
+     String ACTION_AICORE_WINDOW_SHOWN = "kinstalk.com.aicore.action.window_shown";
+     String EXTRA_AICORE_WINDOW_SHOWN = "isShown";
+     String ACTION_PRIVACY_KEY_SHORT_PRESS = "kinstalk.com.aicore.action.privacy_short_press";
+     String PROP_TENCENT_WAKEUP_STATE = "sys.ai.wakeup.state";
+     String ACTION_TXSDK = "kinstalk.com.aicore.action.txsdk";
+     String ACTION_TXSDK_EXTRA_PID = "kinstalk.com.aicore.action.txsdk.pid";
+     String ACTION_TXSDK_EXTRA_SN = "kinstalk.com.aicore.action.txsdk.sn";
+     String ACTION_TXSDK_UPLOAD_SUCCESS = "kinstalk.com.aicore.action.txsdk.upload_complete";
+     String ACTION_TXSDK_BIND_CHANGE = "kinstalk.com.aicore.action.txsdk.bind_change";
+     String EXTRA_AICORE_BIND_STATE = "bind_status";
+     String ACTION_TXSDK_QRCODE_URL = "kinstalk.com.aicore.action.txsdk.qrcode_url";
+     String ACTION_TXSDK_EXTRA_QRURL = "kinstalk.com.aicore.action.txsdk.qrcode";
+     String WATER_ANIM_CLIENT_TYPE = "waterAnim";
+     String WATER_ANIM_JSON_CMD = "cmd";
+     String WATER_ANIM_JSON_TEXT = "text";
+     String WATER_ANIM_JSON_VOLUME = "volume";
+     int WATER_ANIM_CMD_WAKEUP = 0;
+     int WATER_ANIM_CMD_START_RECORD = 1;
+     int WATER_ANIM_CMD_STOP_RECORD = 2;
+     int WATER_ANIM_CMD_SPEAKING = 3;
+     int WATER_ANIM_CMD_SHOW_TEXT = 4;
+     int WATER_ANIM_CMD_VOLUME = 5;
+     int WATER_ANIM_CMD_ENDOFSPEECH = 6;
+     int WATER_ANIM_CMD_ENTER_CHATMODE = 7;
+     int WATER_ANIM_CMD_EXIT_CHATMODE = 8;
+     int WATER_ANIM_CMD_WAKEUP_LIGHT_ON = 9;
+     int WATER_ANIM_CMD_WAKEUP_LIGHT_OFF = 10;
+     String INTENT_AICORE_DEBUG_SETTING = "kinstalk.com.aicore.debug";
+     String INTENT_AICORE_DEBUG_EXTRA_EGG_APP = "kinstalk.com.aicore.debug.extra.egg_app";
+
+}
